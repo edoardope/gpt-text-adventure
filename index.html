@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- styleshit -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+    <header>
+        <h1>chatventure</h1>
+        <p>benvenuto</p>
+    </header>
+
+    <main class="container">
+
+        <!-- scelta del gnere -->
+        <div class="generes">
+            <div class="genere" data-genere="horror">👻</div>
+            <div class="genere" data-genere="film di spionaggio">👻</div>
+            <div class="genere" data-genere="super eroi marvel">👻</div>
+        </div>
+
+        <!-- loader -->
+        <div class="loader hidden">
+            <p>loading...</p>
+        </div>
+
+        <!-- placeholder -->
+        <div id="placeholder">
+
+        </div>
+
+        <!-- game over -->
+        <template id="gameover-template">
+            <div class="gameover">
+                <div class="gameover-icon">☠️</div>
+                <h2>sei morto</h2>
+                <p class="gameover-message"></p>
+                <button>Rigioca</button>
+            </div>
+        </template>
+
+        <!-- stage template -->
+        <template id="stage-template">
+            <div class="stage">
+                <div class="stage-picture"></div>
+                <div class="stage-content">
+                    <p class="stage-description"></p>
+                    <div class="stage-action"></div>
+                </div>
+            </div>
+        </template>
+        
+    </main>
+
+    <!-- javascritp -->
+    <script src="main.js"></script>
+</body>
+</html>

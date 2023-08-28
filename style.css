@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* utilities */
+
+.container{
+    margin: 0 auto;
+    max-width: 512px;
+}
+
+/* generics */
+
+html{
+    color: white;
+    background-color: rgb(3, 3, 119);
+}
+
+/* header */
+
+header{
+    color: rgb(163, 163, 6);
+    background-color: rgb(107, 2, 60);
+    text-align: center;
+    padding: 32px;
+}
+
+h1{
+    font-size: 32px;
+}
+
+p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* genri */
+
+.generes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    gap: 10px;
+}
+
+.genere{
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(26, 102, 150);
+    cursor: pointer
+}
+
+.genere:hover{
+    background-color: aqua;
+}
+
+/* game started */
+
+.game-started h1{
+    font-size: 16px;
+}
+
+.game-started header{
+    padding: 16px;
+}
+
+.game-started header p,
+.game-started .generes {
+    display: none;
+}
+
+/* loader */
+
+.loader{
+    height: 512px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden{
+    display: none;
+}
+
+/* gameover */
+
+.gameover{
+    text-align: center;
+    padding: 32px;
+}
+
+.gameover-icon{
+    font-size: 60px;
+}
+
+button{
+    margin: 10px 0;
+    padding: 16px;
+    width: 100%;
+    font-size: 20px;
+    border: 2px solid black;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+background-color: aqua;
+}
+
+/* stage */
+
+.stage-picture{
+    min-height: 300px;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.stage-content{
+    padding: 16px;
+}

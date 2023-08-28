@@ -1,0 +1,85 @@
+1. Role "user" : It means you or who is chatting or who is asking to chat gpt.
+
+Example: (API Request)
+
+    {
+      "model": "gpt-3.5-turbo",
+      "messages": [
+       {
+          "role": "user",
+          "content": "tell me a joke"
+       }
+      ]
+     }
+
+
+
+
+2. Role "assistant" : It means open AI(chat gpt) server - who is replying your("user" role) questions.
+
+Example: (API Response)
+
+{
+"id": "chatcmpl-87n798n6bv4678",
+"object": "chat.completion",
+"created": 1683212418,
+"model": "gpt-3.5-turbo-0301",
+"usage": {
+    "prompt_tokens": 12,
+    "completion_tokens": 18,
+    "total_tokens": 30
+},
+"choices": [
+    {
+        "message": {
+            "role": "assistant",
+            "content": "why did the chicken cross the road"
+        },
+        "finish_reason": "stop",
+        "index": 0
+    }
+ ]
+}
+If need to continuous chat conversation with previous context- text from both role (user + assistant) need to send to the API.
+
+Example: (API Request)
+
+    {
+      "model": "gpt-3.5-turbo",
+      "messages": [
+       {
+          "role": "user",
+          "content": "tell me a joke"
+       },
+       {
+          "role": "assistant",
+          "content": "why did the chicken cross the road"
+       },
+       {
+          "role": "user",
+          "content": "I don't know, why did the chicken cross the road"
+       }
+      ]
+     }
+
+
+
+
+
+
+3. Role "system" : It means the system developer who can internally give some instructions for the conversation. developer can provide option for user input also which depends on the system requirements.
+Example: (API Request)
+
+    {
+      "model": "gpt-3.5-turbo",
+      "messages": [
+       {
+          "role": "user",
+          "content": "tell me a joke"
+       },
+       {
+          "role": "system",
+          "content": "You are an assistant that speaks like Shakespeare."
+       }
+      ]
+     }
